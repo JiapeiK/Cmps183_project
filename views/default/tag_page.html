@@ -1,4 +1,105 @@
 <!DOCTYPE html>
 <html>
-<h1>tag page</h1>
+<body>
+	<div class = "location">
+		<h1>Locations</h1>
+		<button onclick="select_school(this)" class="button school"> School </button>
+		<button onclick="select_air(this)" class="button air"> In the air </button>
+		<button onclick="select_vehicle(this)" class="button vehicle"> Vehicle </button>
+		<button onclick="select_road(this)" class="button road"> Road </button>
+		<button onclick="select_cave(this)" class="button cave"> Cave </button>
+
+
+
+
+	</div>
+</body>
+
+
+
+<style>
+.button {
+  background-color: gray; /* School / Class */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+
+
+
+</style>
+
+<script>
+var school_clicks = 0;
+	function select_school(_this) {	
+	if(school_clicks%2 == 0){
+		_this.style.backgroundColor = "red";
+		school_clicks = school_clicks+1;
+	}
+	else {
+		_this.style.backgroundColor = "gray";
+		school_clicks = school_clicks + 1;
+	}
+}
+var air_clicks = 0;
+	function select_air(_this) {	
+	if(air_clicks%2 == 0){
+		_this.style.backgroundColor = "red";
+		air_clicks = air_clicks+1;
+	}
+	else {
+		_this.style.backgroundColor = "gray";
+		air_clicks = air_clicks + 1;
+	}
+}
+var vehicle_clicks = 0;
+	function select_vehicle(_this) {	
+	if(vehicle_clicks%2 == 0){
+		_this.style.backgroundColor = "red";
+		vehicle_clicks = vehicle_clicks+1;
+	}
+	else {
+		_this.style.backgroundColor = "gray";
+		vehicle_clicks = vehicle_clicks + 1;
+	}
+}
+var road_clicks = 0;
+	function select_road(_this) {	
+	if(road_clicks%2 == 0){
+		_this.style.backgroundColor = "red";
+		road_clicks = road_clicks+1;
+	}
+	else {
+		_this.style.backgroundColor = "gray";
+		road_clicks = road_clicks + 1;
+	}
+}
+var cave_clicks = 0;
+	function select_cave(_this) {	
+	if(cave_clicks%2 == 0){
+		_this.style.backgroundColor = "red";
+		cave_clicks = cave_clicks+1;
+	}
+	else {
+		_this.style.backgroundColor = "gray";
+		cave_clicks = cave_clicks + 1;
+	}
+}
+
+
+	
+
+</script>
 </html>
+
+
