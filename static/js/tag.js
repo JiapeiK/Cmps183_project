@@ -1,7 +1,6 @@
-var form = document.getElementById('form');
 
 function add(){
-var form = document.getElementById('form');
+  var forms = document.getElementById('form');
   var text = "";
   var schoolkey = "";
   var akey = "";
@@ -45,7 +44,7 @@ var form = document.getElementById('form');
     }
         if (air.style.backgroundColor == "red"){
           console.log("I got the air");
-          akey = "in the air";
+          akey = "in the air ";
         }
         if(vehicle.style.backgroundColor == "red"){
           console.log("car");
@@ -159,7 +158,9 @@ var form = document.getElementById('form');
         console.log(form_content);
 
        // "el" is the parameter that references the "this" argument that was passed
-        form.innerHTML = form_content; // set its content to the value of the "el"
+        
+        //forms.value = form_content; 
+        $('#form').append(form_content);
   }
 
 
