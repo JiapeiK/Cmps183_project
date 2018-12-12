@@ -1,7 +1,17 @@
 {{extend 'layout.html'}}
 
 {{block head}}
-{{end}}
+<script>
+    // Posts API endpoints
+    var add_post_url = "{{=URL('api', 'add_post', user_signature=True)}}";
+    var get_post_list_url = "{{=URL('api', 'get_post_list')}}";
+    var set_like_url = "{{=URL('api', 'set_like', user_signature=True)}}";
+    var get_likers_url = "{{=URL('api', 'get_likers')}}"
+    // Login information
+    var is_logged_in = {{='false' if auth.user is None else 'true'}};
+    var user_email = "{{=  'None' if auth.user is None else  auth.user.email}}";
+</script>
+
 <style>
 * {
     box-sizing: border-box;
@@ -38,10 +48,9 @@
     color: white;
 }
 </style>
-  <!-- Here goes your main HTML code. -->
-
+{{end}}
 <div class ="main_content">
-
+    <div id="vue-div" class="display:none">
 <h2>List View or Grid View</h2>
 
 <p>Click on a button to choose list view or grid view.</p>
@@ -54,7 +63,7 @@
 </div>
 <br>
 
-<div class="row">
+<div class="row" >
   <div class="column" style="background-color:#aaa;">
     <h2>Column 1</h2>
     <p>Some text..</p>
@@ -75,6 +84,47 @@
     <p>Some text..</p>
   </div>
 </div>
+  
+
+      <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
+
+      <!-- First, let's add a form to insert blog posts. -->
+      <div id="add_post" style="display:none">
+        <div class="container form_row">
+          <div class="label quarter">
+            Title:
+          </div>
+          <div class="form threequarters">
+            <input v-model="form_title" placeholder="Enter the post title"/>
+          </div>
+        </div>
+        <div class="container form_row">
+          <div class="label quarter">
+            Content:
+          </div>
+          <div class="form threequarters">
+            <textarea v-model="form_content" placeholder="Enter the content of your post"></textarea>
+          </div>
+        </div>
+        <div class="container form_row"><div class="quarter"></div>
+          <div class="threequarters">
+            <div class="submit">
+              <button id="add-post" v-on:click="add_post">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <div v-if="post_list.length === 0">There are no posts.</div>
+    <div id="post_list">
+          <div class="post_div" v-for="post in post_list">
+            <div class="post_title">${post.post_title}</div>
+            <div class="post_content">${post.post_content}</div>
+      </div>
+    </div>
+</div>
+</div>
+
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
 
 <script>
 // Get the elements with class="column"
@@ -108,7 +158,3 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-</div>
-
-
-
