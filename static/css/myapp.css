@@ -60,6 +60,21 @@ div.post_title{
  
  
 div.main_content div.post_div{
+    color:black;
+    text-align:center;
+    background-image: url('bg-clouds.png');
+      background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+    background-size: cover;
+    font-size: 12px;
+    font-family: 'Dancing Script', cursive;
+    -webkit-animation: backgroundScroll 15s linear 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: backgroundScroll 15s linear 1;
+    animation-fill-mode: forwards;
+
+
   animation: animationFrames linear 1s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
@@ -75,6 +90,16 @@ div.main_content div.post_div{
   -ms-animation: animationFrames linear 1s;
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
+}
+
+
+@keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -180px 0px;}
+}
+@-webkit-keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -180px 0px;}
 }
 
 @keyframes animationFrames{
@@ -256,3 +281,4 @@ div.main_content div.post_div{
     -ms-transform:  translate(0px,0px)  ;
   }
 }
+
