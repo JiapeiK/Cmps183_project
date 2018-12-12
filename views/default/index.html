@@ -43,68 +43,21 @@
 </div>
 <br>
 
-<div class="row" >
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2>Column 3</h2>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2>Column 4</h2>
-    <p>Some text..</p>
-  </div>
-</div>
-  
+              <div class ="container">
+                  <div class="post_div third compressible" v-for="post in post_list">
+                    <div class = "post">
+                      
+                      <div class = "post_content"> 
+                        <div class = "post_title">${post.post_title}</div>
+                      </br>
+                        <div id= "oldpost">${post.post_content}</div>
+                      </div>
+                   
+                    </div>
+                  </div>
+            </div>
 
       <!-- Your code goes here.  Remember to call $("#vue-div").show() once you get the data for the first time. -->
-
-      <!-- First, let's add a form to insert blog posts. -->
-      <div id="add_post" style="display:none">
-        <div class="container form_row">
-          <div class="label quarter">
-            Title:
-          </div>
-          <div class="form threequarters">
-            <input v-model="form_title" placeholder="Enter the post title"/>
-          </div>
-        </div>
-        <div class="container form_row">
-          <div class="label quarter">
-            Content:
-          </div>
-          <div class="form threequarters">
-            <textarea v-model="form_content" placeholder="Enter the content of your post"></textarea>
-          </div>
-        </div>
-        <div class="container form_row"><div class="quarter"></div>
-          <div class="threequarters">
-            <div class="submit">
-              <button id="add-post" v-on:click="add_post">Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-     <div v-if="post_list.length === 0">There are no posts.</div>
-
-      <div id="post_list">
-        <div class="post_div" v-for="post in post_list">
-          <div class="post_title">${post.post_title}</div>
-          <div class="post_content">${post.post_content}</div>
-          <div class="attributes">
-            
-</div>
-</div>
-</div>
 </div>
 </div>
 
