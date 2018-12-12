@@ -42,9 +42,3 @@ db.define_table('user_star',
                 Field('rating', 'integer', default=None) # The star rating.
                 )
 
-# Thumbs
-db.define_table('thumb',
-                Field('user_email'), # The user who thumbed, easier to just write the email here.
-                Field('post_id', 'reference post'), # The thumbed post
-                Field('thumb_state'), # This can be 'u' for up or 'd' for down, or None for... None.
-                )

@@ -1,6 +1,7 @@
 
 function add(){
   var forms = document.getElementById('form');
+
   var text = "";
   var schoolkey = "";
   var akey = "";
@@ -158,8 +159,7 @@ function add(){
         console.log(form_content);
 
        // "el" is the parameter that references the "this" argument that was passed
-        
-        //forms.value = form_content; 
+        forms.value = form_content; 
         $('#form').append(form_content);
   }
 

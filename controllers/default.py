@@ -20,6 +20,7 @@ def index():
     return dict(message=T('Welcome to web2py!'))
     redirect(URL("tag_page"))
     redirect(URL("post_page"))
+    redirect(URL("image"))
 
 def tag_page():
     return dict()
@@ -27,6 +28,9 @@ def tag_page():
 def post_page():
     return dict()
 
+def image():
+    return dict()
+    
 def user():
     """
     exposes:

@@ -1,9 +1,9 @@
 {{extend 'layout.html'}}
-
+  
 {{block head}}
  <script src="{{=URL('static', 'js/tag.js')}}"></script>
 <script src="{{=URL('static', 'js/vue.js')}}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <script>
     // Posts API endpoints
     var add_post_url = "{{=URL('api', 'add_post', user_signature=True)}}";
@@ -96,8 +96,10 @@
 
     <button onclick="select_late(this)" id = "late"class="button late" title="Dreaming that you are late represents your worry and anxiety about taking a different direction in your waking life. You may not be 100% confident about making a change. It may also mean that you feel like you are running out of time to get something done. Your unconscious is telling you that it is never too late to do the things you want in life.Have you worked out what your dream means with the help of our infographic? Tells us all about it in the comments section below."> Being Late</button>
 </div>
+<p>Reminder: compile after select tags and then add somethings such as a quotation mark or a dot in the textfield in order to post successfully</p>
 <div id="vue-div" class="display:none">
     <div id= "add_post">
+        </br>
             <input v-model = "form_title" placeholder="Enter the title" style="width: 80%;"/>
             <input v-model = "form_content" id ="form"style="width: 80%"/>
             <div class ="Submit" style="float: right;">

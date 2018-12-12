@@ -37,10 +37,10 @@
 
 <div class ="main_content">
     <div id="vue-div" class="display:none">
-      <div v-if = "is_logged_in" id="btnContainer" class = "padded">
-        <a href="tag_page.html"><button>Write by tags</button></a>
-        <a href="post_page.html"><button>Write post</button></a>
-      </div>
+<div id="btnContainer" class = "padded">
+  <a href="tag_page.html"><button>Write by tags</button></a>
+  <a href="post_page.html"><button>Write post</button></a>
+</div>
 <br>
 
               <div class ="container">
@@ -53,17 +53,6 @@
                         <div id= "oldpost">${post.post_content}</div>
                       </div>
                    
-                       <span v-if="is_logged_in" class="toggle_like"
-                      v-on:mouseover="like_mouseover(post._idx); show_likers(post._idx)"
-                      v-on:mouseout="hide_likers(post._idx); like_mouseout(post._idx)"
-                      v-on:click="like_click(post._idx)">
-                        <i v-if="post._smile" class="fa fa-heart padded" style= "float: right; margin-top: 40px" v-bind:class="{changed: post._smile === !post.like}"></i>
-                        <i v-if="!post._smile" class="fa fa-heart-o padded" style= "float: right; margin-top: 40px;" v-bind:class="{changed: post._smile === !post.like}"></i>
-                       </span>
-                       <!--
-                            <span class="like_count" style= "float: right; margin-top: 40px;" >
-                                <span >${post._likes}</span>
-                            </span> -->
                     </div>
                   </div>
             </div>
