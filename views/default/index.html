@@ -51,6 +51,7 @@
                         <div class = "post_title">${post.post_title}</div>
                       </br>
                         <div id= "oldpost">${post.post_content}</div>
+                        <div id ="author" style="float: right;">by ${post.post_author}</div>
                       </div>
                    
                        <span v-if="is_logged_in" class="toggle_like"
