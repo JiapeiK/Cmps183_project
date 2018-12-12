@@ -3,12 +3,23 @@
 
 {{block head}}
  <script src="{{=URL('static', 'js/tag.js')}}"></script>
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+
+<script>
+    // Posts API endpoints
+    var add_post_url = "{{=URL('api', 'add_post', user_signature=True)}}";
+    var get_post_list_url = "{{=URL('api', 'get_post_list')}}";
+    var set_like_url = "{{=URL('api', 'set_like', user_signature=True)}}";
+    var get_likers_url = "{{=URL('api', 'get_likers')}}"
+    // Login information
+    var is_logged_in = {{='false' if auth.user is None else 'true'}};
+</script>
 
 {{end}}
 <div class = "main_container" style = "height: 75%">
   <div class = "location">
     <h5>Locations</h5>
-    <button onclick="select_school(this)" class="button school" title="If you dream of being back in your school, this can represent lessons or tests in your current waking life. Furthermore, if you are taking a test in your dream, this could mean feeling tested in your life, something which you are not prepared take. The test or lesson in your dream can also signal something that you need to relearn from your past."> School </button>
+    <button onclick="select_school(this),add('school')" class="button school" title="If you dream of being back in your school, this can represent lessons or tests in your current waking life. Furthermore, if you are taking a test in your dream, this could mean feeling tested in your life, something which you are not prepared take. The test or lesson in your dream can also signal something that you need to relearn from your past."> School </button>
 
     <button onclick="select_air(this)" class="button air" title="Flying in your dream represents how much control you feel you have in your life. It also signifies your ability or level of confidence in achieving your goals and dreams. Take notice of how well you are able to fly in your dream. Are you flying poorly or flying fairly well? Do you feel in control or out of control?"> In the air </button>
 
@@ -86,5 +97,16 @@
 
     <button onclick="select_late(this)" class="button late" title="Dreaming that you are late represents your worry and anxiety about taking a different direction in your waking life. You may not be 100% confident about making a change. It may also mean that you feel like you are running out of time to get something done. Your unconscious is telling you that it is never too late to do the things you want in life.Have you worked out what your dream means with the help of our infographic? Tells us all about it in the comments section below."> Being Late</button>
 </div>
+            <div class ="Submit" style="float: right;">
+              <button style = "background-color: navy" id = "saveDelta" v-on:click = "add_post" onclick ="goback()">Submit Post</button>
+              <a href="{{=URL('default', 'index.html')}}"><button style = "background-color: navy">Cancel</button></a>
+            </div>
+<section>
+    <ul id = "result">
+</ul>
+</section>
+
 
 </div>
+
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
