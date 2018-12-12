@@ -1,4 +1,4 @@
-# Define your tables below (or better in another model file) for example
+ #Define your tables below (or better in another model file) for example
 #
 # >>> db.define_table('mytable', Field('myfield', 'string'))
 #
@@ -6,6 +6,12 @@
 #       'date','time','datetime','blob','upload', 'reference TABLENAME'
 # There is an implicit 'id integer autoincrement' field
 # Consult manual for more options, validators, etc.
+
+
+
+
+# after defining tables, uncomment below to enable auditing
+# auth.enable_record_versioning(db)
 
 
 import datetime
@@ -28,5 +34,17 @@ db.define_table('user_like',
                 Field('user_email'), # The user who flagged
                 Field('post_id', 'reference post'), # The flagged post
 )
-# after defining tables, uncomment below to enable auditing
-# auth.enable_record_versioning(db)
+
+# Stars ratings
+db.define_table('user_star',
+                Field('user_email'), # The user who starred
+                Field('post_id', 'reference post'), # The starred post
+                Field('rating', 'integer', default=None) # The star rating.
+                )
+
+# Thumbs
+db.define_table('thumb',
+                Field('user_email'), # The user who thumbed, easier to just write the email here.
+                Field('post_id', 'reference post'), # The thumbed post
+                Field('thumb_state'), # This can be 'u' for up or 'd' for down, or None for... None.
+                )

@@ -1,4 +1,3 @@
-# Here go your api methods.
 
 
 @auth.requires_signature()
@@ -23,12 +22,14 @@ def get_post_list():
                 post_content=row.post_content,
                 post_author=row.post_author,
                 like = False, # Anyway not used as the user is not logged in. 
+                rating = None, # As above
             ))
     else:
         # Logged in.
         rows = db().select(db.post.ALL, db.user_like.ALL, db.user_star.ALL,
                             left=[
                                 db.user_like.on((db.user_like.post_id == db.post.id) & (db.user_like.user_email == auth.user.email)),
+                                db.user_star.on((db.user_star.post_id == db.post.id) & (db.user_star.user_email == auth.user.email)),
                             ],
                             orderby=~db.post.post_time)
         for row in rows:
@@ -38,6 +39,7 @@ def get_post_list():
                 post_content=row.post.post_content,
                 post_author=row.post.post_author,
                 like = False if row.user_like.id is None else True,
+                rating = None if row.user_star.id is None else row.user_star.rating,
             ))
     # For homogeneity, we always return a dictionary.
     return response.json(dict(post_list=results))
@@ -72,3 +74,15 @@ def get_likers():
     # We return this list as a dictionary field, to be consistent with all other calls.
     return response.json(dict(likers=likers_list))
 
+
+def set_stars():
+    """Sets the star rating of a post."""
+    post_id = int(request.vars.post_id)
+    rating = int(request.vars.rating)
+    db.user_star.update_or_insert(
+        (db.user_star.post_id == post_id) & (db.user_star.user_email == auth.user.email),
+        post_id = post_id,
+        user_email = auth.user.email,
+        rating = rating
+    )
+    return "ok" # Might be useful in debugging.
