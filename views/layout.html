@@ -15,7 +15,7 @@
   <body class="black">
     {{if response.flash:}}
     {{pass}}
-    <header class="black" style ="padding: 10px">
+    <header class="header" style ="padding: 10px; height: 50px;">
         <div class = "headersub" style= "margin-top: 30px;">
             <img src="{{=URL('static', 'images', args='logo.png')}}" width= "150px" height="30px">
             <!--{{=MENU(response.menu,_class='menu')}}-->
@@ -30,15 +30,10 @@
     <main class="white">
       {{include}}
     </main>
-    <footer class="black">
-      <div class="silver center padded social">
-        <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={url}"></a>
-        <a class="fa fa-twitter" href="https://twitter.com/home?status={url}"></a>
-        <a class="fa fa-google" href="https://plus.google.com/share?url={url}"></a>
-      </div>
-      <div class="container padded max900">
-        <div class="fill">
-          Copyright @ 2016, Create by Ge Lu, Jiapei Kuang
+    <footer class="black" style = "height: 30px;">
+      <div class="container padded">
+        <div class="fill" style="margin-left: 35%">
+          Copyright @ 2016, Create by Ge Lu, Jiapei Kuang for CMPS 183
         </div>
       </div>
     </footer>
