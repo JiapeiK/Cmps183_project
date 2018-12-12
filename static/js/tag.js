@@ -1,22 +1,23 @@
 
-function add(keyword){
+function add(){
+  if (school.style.backgroundColor == "red"){
+      console.log("I got my school");
+        if (air.style.backgroundColor == "red"){
+          console.log("I got the air");
+        }if(vehicle.style.backgroundColor == "red"){
+          console.log("car")
+        }if(road.style.backgroundColor == "red"){
 
-  var output = '<li>' +
-  '<p>'+keyword+'</p>' +
-  '</div>' +
-  '</li>' +
-  '<div class="clearfix"></div>' +
-  '';
-        
-  $('#result').append(output);
+        }
 
+  }
 }
 
 var school_clicks = 0;
   function select_school(_this) { 
   if(school_clicks%2 == 0){
     _this.style.backgroundColor = "red";
-    school_clicks = school_clicks+1;
+    school_clicks = school_clicks + 1;
   }
   else {
     _this.style.backgroundColor = "rosybrown";
