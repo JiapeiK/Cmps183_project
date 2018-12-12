@@ -20,10 +20,13 @@ def index():
     response.flash = T("Hello World")
     return dict(message=T('Welcome to web2py!'))
     redirect(URL("tag_page"))
+    redirect(URL("post_page"))
 
 def tag_page():
     return dict()
 
+def post_page():
+    return dict()
 
 def user():
     """
