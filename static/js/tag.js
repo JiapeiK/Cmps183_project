@@ -7,7 +7,78 @@ function add(){
         }if(vehicle.style.backgroundColor == "red"){
           console.log("car")
         }if(road.style.backgroundColor == "red"){
+          console.log("road")
+        }if(cave.style.backgroundColor == "red"){
+          console.log("cave")
+        }if(trapped.style.backgroundColor == "red"){
+          console.log("trapped someplace")
+        }if(house.style.backgroundColor == "red"){
+          console.log("house")
+        }if(stair.style.backgroundColor == "red"){
+          console.log("stairs")
+        }if(bridge.style.backgroundColor == "red"){
+          console.log("bridge")
+        }if(boat.style.backgroundColor == "red"){
+          console.log("boat")
+        }if(water.style.backgroundColor == "red"){
+          console.log("under water")
+        }if(hospital.style.backgroundColor == "red"){
+          console.log("hospital")
+        }if(mounrains.style.backgroundColor == "red"){
+          console.log("mounrains")
+        }if(bar.style.backgroundColor == "red"){
+          console.log("mountains")
+        }if(prom.style.backgroundColor == "red"){
+          console.log("prom")
+        }if(church.style.backgroundColor == "red"){
+          console.log(church)
+        }if(circus.style.backgroundColor == "red"){
+          console.log("circus")
+        }if(forest.style.backgroundColor == "red"){
+          console.log("forest")
+        }
 
+
+        if(mother.style.backgroundColor == "red"){
+          console.log("mother")
+        }if(father.style.backgroundColor == "red"){
+          console.log("father")
+        }if(grandparents.style.backgroundColor == "red"){
+          console.log("grandparents")
+        }if(son.style.backgroundColor == "red"){
+          console.log("son")
+        }if(daughter.style.backgroundColor == "red"){
+          console.log("daughter")
+        }if(husband.style.backgroundColor == "red"){
+          console.log("husband")
+        }if(wife.backgroundColor == "red"){
+          console.log("wife")
+        }if(friends.style.backgroundColor == "red"){
+          console.log("friends")
+        }if(lover.style.backgroundColor == "red"){
+          console.log("lover")
+        }if(colleagues.style.backgroundColor == "red"){
+          console.log("colleagues")
+        }if(figures.style.backgroundColor == "red"){
+          console.log("authority figures")
+        }if(fantasy.style.backgroundColor =="red"){
+          console.log("fantasy characters")
+        }if(celebrities.style.backgroundColor =="red"){
+          console.log("celebrities")
+        }
+
+
+
+        if(chased.style.backgroundColor=="red"){
+          console.log("being chased")
+        }if(toilet.style.backgroundColor){
+          console.log(unable to find toilet)
+        }if(flying.style.backgroundColor=="red"){
+          console.log("flying")
+        }if(falling.style.backgroundColor=="red"){
+          console.log("flying")
+        }if(late.style.backgroundColor=="red"){
+          console.log("being late")
         }
 
   }
