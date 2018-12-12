@@ -1,167 +1,88 @@
-var form = document.getElementById('form');
 
 function add(){
-var form = document.getElementById('form');
-  var text = "";
-  var schoolkey = "";
-  var akey = "";
-  var vkey = "";
-  var rkey = "";
-  var ckey = "";
-  var trappedkey = "";
-  var housekey = "";
-  var stakey = "";
-  var brikey = "";
-  var boatkey = "";
-  var waterkey = "";
-  var hospkey = "";
-  var latekey = "";
-  var mount = "";
-  var barkey = "";
-  var promkey = "";
-  var churchkey = "";
-  var circuskey = "";
-  var forestkey = "";
-  var motherkey = "";
-  var fatherkey = "";
-  var grandkey = "";
-  var sonkey = "";
-  var daugkey = "";
-  var wifekey = "";
-  var huskey = "";
-  var friendskey = "";
-  var loverkey = "";
-  var collkey = "";
-  var auth = "";
-  var fantas ="";
-  var cele ="";
-  var chas ="";
-  var toil ="";
-  var fly = "";
-  var fall = "";
   if (school.style.backgroundColor == "red"){
       console.log("I got my school");
-      schoolkey = "school ";
-    }
         if (air.style.backgroundColor == "red"){
           console.log("I got the air");
-          akey = "in the air";
-        }
-        if(vehicle.style.backgroundColor == "red"){
-          console.log("car");
-          vkey = "vehicle "
-        }
-        if(road.style.backgroundColor == "red"){
-          console.log("road");
-          rkey = "road ";
+        }if(vehicle.style.backgroundColor == "red"){
+          console.log("car")
+        }if(road.style.backgroundColor == "red"){
+          console.log("road")
         }if(cave.style.backgroundColor == "red"){
-          console.log("cave");
-          ckey = "cave ";
+          console.log("cave")
         }if(trapped.style.backgroundColor == "red"){
-          console.log("trapped someplace");
-          trappedkey= "trapped someplace "
-
+          console.log("trapped someplace")
         }if(house.style.backgroundColor == "red"){
-          console.log("house");
-          housekey = "house ";
+          console.log("house")
         }if(stair.style.backgroundColor == "red"){
-          console.log("stairs");
-          stakey = "stairs ";
+          console.log("stairs")
         }if(bridge.style.backgroundColor == "red"){
-          console.log("bridge");
-          brikey = "bridge ";
+          console.log("bridge")
         }if(boat.style.backgroundColor == "red"){
-          console.log("boat");
-          boatkey = "boat "
+          console.log("boat")
         }if(water.style.backgroundColor == "red"){
-          console.log("under water");
-          waterkey = "under water ";
+          console.log("under water")
         }if(hospital.style.backgroundColor == "red"){
-          console.log("hospital");
-          hospkey = "hosiptal "
-        }if(mountains.style.backgroundColor == "red"){
-          console.log("mounrains");
-          mount = "mountains ";
+          console.log("hospital")
+        }if(mounrains.style.backgroundColor == "red"){
+          console.log("mounrains")
         }if(bar.style.backgroundColor == "red"){
-          console.log("barss");
-          barkey = "bar ";
+          console.log("mountains")
         }if(prom.style.backgroundColor == "red"){
-          console.log("prom");
-          promkey = "prom ";
+          console.log("prom")
         }if(church.style.backgroundColor == "red"){
-          console.log("church");
-          churchkey = "church ";
+          console.log(church)
         }if(circus.style.backgroundColor == "red"){
-          console.log("circus");
-          circuskey = "circus ";
+          console.log("circus")
         }if(forest.style.backgroundColor == "red"){
-          console.log("forest");
-          forestkey = "forest ";
+          console.log("forest")
         }
+
 
         if(mother.style.backgroundColor == "red"){
-          console.log("mother");
-          motherkey = "mother ";
+          console.log("mother")
         }if(father.style.backgroundColor == "red"){
-          console.log("father");
-          fatherkey = "father ";
+          console.log("father")
         }if(grandparents.style.backgroundColor == "red"){
-          console.log("grandparents");
-          grandkey = "grandparents ";
+          console.log("grandparents")
         }if(son.style.backgroundColor == "red"){
-          console.log("son");
-          sonkey = "son ";
+          console.log("son")
         }if(daughter.style.backgroundColor == "red"){
-          console.log("daughter");
-          daugkey = "daughter ";
+          console.log("daughter")
         }if(husband.style.backgroundColor == "red"){
-          console.log("husband");
-          huskey = "husband ";
+          console.log("husband")
         }if(wife.backgroundColor == "red"){
-          console.log("wife");
-          wifekey = "wife ";
+          console.log("wife")
         }if(friends.style.backgroundColor == "red"){
-          console.log("friends");
-          friendskey = "friends ";
+          console.log("friends")
         }if(lover.style.backgroundColor == "red"){
-          console.log("lover");
-          loverkey ="lover ";
+          console.log("lover")
         }if(colleagues.style.backgroundColor == "red"){
-          console.log("colleagues");
-          collkey = "colleagues";
+          console.log("colleagues")
         }if(figures.style.backgroundColor == "red"){
-          console.log("authority figures");
-          auth = "authority figures ";
+          console.log("authority figures")
         }if(fantasy.style.backgroundColor =="red"){
-          console.log("fantasy characters");
-          fantas = "fantasy characters ";
+          console.log("fantasy characters")
         }if(celebrities.style.backgroundColor =="red"){
-          console.log("celebrities");
-          cele = "celebrities ";
+          console.log("celebrities")
         }
+
+
+
         if(chased.style.backgroundColor=="red"){
-          console.log("being chased");
-          chas = "being chased ";
+          console.log("being chased")
         }if(toilet.style.backgroundColor){
-          console.log("unable to find toilet");
-          toil = "unable to find toilet ";
+          console.log(unable to find toilet)
         }if(flying.style.backgroundColor=="red"){
-          console.log("flying");
-          fly = "flying ";
+          console.log("flying")
         }if(falling.style.backgroundColor=="red"){
-          console.log("falling");
-          fall = "falling ";
+          console.log("flying")
         }if(late.style.backgroundColor=="red"){
-          console.log("being late");
-          latekey = "being late ";
+          console.log("being late")
         }
-        form_content = schoolkey + akey + vkey + rkey + ckey + trappedkey + housekey + stakey +brikey +boatkey +waterkey + hospkey + latekey + mount + barkey +promkey + churchkey +circuskey + forestkey + motherkey + fatherkey + grandkey + daugkey + sonkey + wifekey + auth + loverkey + friendskey + collkey + fantas + cele + chas + toil + fly + fall;
-        console.log(form_content);
 
-       // "el" is the parameter that references the "this" argument that was passed
-        form.innerHTML = form_content; // set its content to the value of the "el"
   }
-
+}
 
 var school_clicks = 0;
   function select_school(_this) { 
@@ -428,18 +349,6 @@ var son_clicks = 0;
 }
 
 
-var daughter_clicks = 0;
-  function select_daughter(_this) { 
-  if(daughter_clicks%2 == 0){
-    _this.style.backgroundColor = "red";
-    daughter_clicks = daughter_clicks+1;
-  }
-  else {
-    _this.style.backgroundColor = "rosybrown";
-    daughter_clicks = daughter_clicks + 1;
-  }
-}
-
 var husband_clicks = 0;
   function select_husband(_this) { 
   if(husband_clicks%2 == 0){
@@ -595,4 +504,3 @@ var late_clicks = 0;
     late_clicks = late_clicks + 1;
   }
 }
-

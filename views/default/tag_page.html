@@ -1,4 +1,3 @@
-
 {{extend 'layout.html'}}
 
 {{block head}}
@@ -97,17 +96,23 @@
 
     <button onclick="select_late(this)" id = "late"class="button late" title="Dreaming that you are late represents your worry and anxiety about taking a different direction in your waking life. You may not be 100% confident about making a change. It may also mean that you feel like you are running out of time to get something done. Your unconscious is telling you that it is never too late to do the things you want in life.Have you worked out what your dream means with the help of our infographic? Tells us all about it in the comments section below."> Being Late</button>
 </div>
+              <button style = "background-color: navy" onclick = "add()">Compile</button>
+<div id="vue-div" class="display:none">
+    <div id= "add_post">
+            <input v-model = "form_title" placeholder="Enter the title" style="width: 80%; height:10%; font-size: 12pt;"/>
+            <textarea v-mode = "form_content" id = "form" value="form_content"></textarea>
             <div class ="Submit" style="float: right;">
-              <button style = "background-color: navy" onclick ="add()">Submit Post</button>
+              <button style = "background-color: navy" v-on:click= "add_post" onclick = "goback()">Submit Post</button>
               <a href="{{=URL('default', 'index.html')}}"><button style = "background-color: navy">Cancel</button></a>
             </div>
-
-<section>
-    <ul id = "result">
-</ul>
-</section>
-
-
+    </div> 
 </div>
+</div>
+<script type="text/javascript">
+    function goback(){  
+      window.location.assign("{{=URL('default', 'index.html')}}");
+    }
+    document.getElementById("form").innerHTML = add();
+</script>
 
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
