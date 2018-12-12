@@ -1,6 +1,6 @@
 {{extend 'layout.html'}}
 <div class = "signup_container">
-<h3 style = " padding:10px; text-align: center; font-family: Arial">
+<h3 style = " padding:10px; text-align: center; font-family: Arial;">
 {{=T('Welcome to Dreamer') if request.args(0) == 'register' else T('Welcome Back') if request.args(0) == 'login' else T(request.args(0).replace('_',' ').title())}}
 </h3>
 
