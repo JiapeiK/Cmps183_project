@@ -2,17 +2,10 @@
 {{extend 'layout.html'}}
 
 {{block head}}
-{{end}}
-
-<!DOCTYPE html>
-<head>
  <script src="{{=URL('static', 'js/tag.js')}}"></script>
 
-</head>
-<html>
-
-<body>
-
+{{end}}
+<div class = "main_container" style = "height: 75%">
   <div class = "location">
     <h1>Locations</h1>
     <button onclick="select_school(this)" class="button school" title="If you dream of being back in your school, this can represent lessons or tests in your current waking life. Furthermore, if you are taking a test in your dream, this could mean feeling tested in your life, something which you are not prepared take. The test or lesson in your dream can also signal something that you need to relearn from your past."> School </button>
@@ -54,9 +47,5 @@
 
 
   </div>
-</body>
 
-
-</html>
-
-
+</div>
