@@ -14,25 +14,18 @@
   </head>
   <body class="black">
     {{if response.flash:}}
-    <div class="w2p_flash">
-      {{=response.flash}}
-    </div>
     {{pass}}
-    <header class="black padded">
-      <div class="container middle max900">
-        <div class="fill middle">
-          <label class="ham padded fa fa-bars" for="menu"></label>
-          <div class="burger accordion">
-            <input type="checkbox" id="menu"/>
-            {{=MENU(response.menu,_class='menu')}}
-            <ul class="menu right">
+    <header class="black">
+        <div class = "headersub" style= "margin-top: 55px;">
+            <img src="{{=URL('static', 'images', args='logo.png')}}" width= "150px" height="30px">
+            <!--{{=MENU(response.menu,_class='menu')}}-->
+            <ul class="menu right" style = "margin-right: 55px">
               <li>
                 {{=auth.navbar(mode='dropdown')}}
               </li>
             </ul>
           </div>
-        </div>
-      </div>
+
     </header>
     <main class="white">
       {{include}}
@@ -45,7 +38,7 @@
       </div>
       <div class="container padded max900">
         <div class="fill">
-          Copyright @ 2016
+          Copyright @ 2016, Create by Ge Lu, Jiapei Kuang
         </div>
       </div>
     </footer>
